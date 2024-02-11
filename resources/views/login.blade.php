@@ -5,9 +5,10 @@
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="{{route('login')}}" method="post">
         @csrf
         @error('credentials')
-        <p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-3 text-center" role="alert">{{$message}}</p>    
+        <p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-3 text-center"
+            role="alert">{{$message}}</p>
         @enderror
-        
+
         <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                 Username
@@ -39,6 +40,16 @@
             </button>
             <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
                 Forgot Password?
+            </a>
+        </div>
+        <div class="flex items-center justify-between mt-2">
+            <a href="{{route('github-auth.redirect')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Sign In with Github
+            </a>
+        </div>
+        <div class="flex items-center justify-between mt-2">
+            <a href="{{route('google-auth.redirect')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Sign In with Google
             </a>
         </div>
     </form>
