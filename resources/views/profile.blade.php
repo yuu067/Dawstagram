@@ -20,6 +20,10 @@
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
                             <input type="email" name="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="{{auth()->user()->email}}" readonly>
                         </div>
+                        <div class="mt-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="followers">Followers</label>
+                            <input type="followers" name="followers" id="followers" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="{{auth()->user()->followers}}" readonly>
+                        </div>
                     </form>
                     
                     <div class="mt-8">

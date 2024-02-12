@@ -52,7 +52,7 @@
             </a></li>
 
             <li>
-              <a href={{route('paypal')}}>Paypal</a>
+              <a href={{route('paypal')}}>Buy followers</a>
             </li>
 
           <li> <a

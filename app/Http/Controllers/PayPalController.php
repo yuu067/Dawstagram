@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Srmklive\PayPal\Services\PayPal as PayPalClient;
+use Auth;
 
 
 class PayPalController extends Controller
@@ -32,9 +33,9 @@ class PayPalController extends Controller
             "purchase_units" => [
                 0 => [
                     "amount" => [
-                        "currency_code" => "USD",
-                        "value" => "50.00"
-                    ]
+                        "currency_code" => "EUR",
+                        "value" => "10.00"
+                    ],
                 ]
             ]
         ]);
@@ -84,6 +85,7 @@ class PayPalController extends Controller
         $response = $provider->capturePaymentOrder($request['token']);
   
         if (isset($response['status']) && $response['status'] == 'COMPLETED') {
+            Auth::user()->update(['followers' => Auth::user()->followers + 50]);
             return redirect()
                 ->route('paypal')
                 ->with('success', 'Transaction complete.');
