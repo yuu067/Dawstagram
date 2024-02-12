@@ -5,7 +5,8 @@
 <div>
     <h2 class="font-bold underline text-center mt-5 text-3xl">Buy followers</h2>
     <p class="text-center">Payment Method: Paypal</p>
-
+{{-- email:sb-ssxpp29428884@personal.example.com
+pass: 0UD_$4Ln --}}
     <div class="container text-center mx-auto">
         <p class="text-center"><b>Price:</b> 10€ - 50 followers</p>
         <img class="mx-auto w-1/5" src="{{asset('images/BuyFollowers.jpg')}}" alt="idk">
